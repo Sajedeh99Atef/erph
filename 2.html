@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>README</title>
+    <style>
+      body {
+        background-color: #0d1117;
+        color: #c9d1d9;
+        font-family: monospace;
+        padding: 40px;
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2 {
+        color: #f0f6fc;
+        border-bottom: 1px solid #30363d;
+        padding-bottom: 6px;
+      }
+
+      .box {
+        border: 1px solid #30363d;
+        padding: 16px;
+        margin: 16px 0 32px;
+        border-radius: 6px;
+      }
+
+      .hint {
+        margin-top: 60px;
+        text-align: center;
+        color: #8b949e;
+        cursor: pointer;
+        transition: color 0.3s ease;
+      }
+
+      .hint:hover {
+        color: #f0f6fc;
+      }
+
+      .secret {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .secret.show {
+        max-height: 200px;
+        opacity: 1;
+        transform: translateY(0);
+        margin-top: 15px;
+      }
+
+      .heart {
+        color: #ff6b81;
+        margin-left: 6px;
+      }
+
+      .signature {
+        margin-top: 6px;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>About this project</h1>
+    <div class="box">
+      Minimal.<br />
+      No decorations.<br />
+      No obligations.
+    </div>
+
+    <h2>Why this exists</h2>
+    <div class="box">
+      Not Valentine.<br />
+      Not a gift.<br />
+      Just a small intentional thing.
+    </div>
+
+    <h2>Tech stack</h2>
+    <div class="box">
+      HTML<br />
+      CSS<br />
+      Zero expectations
+    </div>
+
+    <h2>License</h2>
+    <div class="box">Use freely. No pressure.</div>
+
+    <div class="hint" onclick="toggleMessage()">click here</div>
+
+    <div id="secret" class="secret">
+      I will always love you <span class="heart">♥</span>
+      <div class="signature">
+        -Sajedeh<br />
+        
+      </div>
+    </div>
+
+    <script>
+      function toggleMessage() {
+        document.getElementById("secret").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
