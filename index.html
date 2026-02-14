@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: "Arial", sans-serif;
+        background-color: #0d1117; /* کاملاً مشکی */
+        color: #ffffff; /* متن سفید */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      h1,
+      p,
+      button {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        animation: fadeUp 1s forwards;
+        animation-delay: 0.5s;
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        animation: fadeUp 1s forwards;
+        animation-delay: 2s;
+      }
+
+      button {
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+        border: 2px solid #ffffff;
+        border-radius: 5px;
+        background-color: #000000; /* مشکی */
+        color: #ffffff; /* سفید */
+        cursor: pointer;
+        animation: fadeUp 1s forwards;
+        animation-delay: 3.5s;
+        transition: background-color 0.3s, color 0.3s, transform 0.2s;
+      }
+
+      button:hover {
+        background-color: #ffffff; /* سفید */
+        color: #000000; /* متن مشکی */
+        transform: scale(1.05);
+      }
+
+      @keyframes fadeUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hi Erphan</h1>
+      <p>I built this to tell you something</p>
+      <button onclick="goNext()">Ready?</button>
+    </div>
+
+    <script>
+      function goNext() {
+        window.location.href = "2.html"; // لینک به صفحه دوم
+      }
+    </script>
+  </body>
+</html>
